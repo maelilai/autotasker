@@ -164,20 +164,29 @@ function App() {
     () =>
       localStorage.getItem("jugendlohn_tasks") ||
       [
-        "Abwaschen: 4",
-        "Staubsaugen: 4",
-        "Tisch decken: 4",
-        "Wäsche zusammenlegen: 4",
-        "Müll rausbringen: 4",
-        "Bad putzen: 3",
-        "Zimmer aufräumen: 6",
+  "Eigenes Bett machen: 3",
+  "Dreckiges Geschirr ab- und einräumen: 8",
+  "Dreckige Kleider in Waschküche: 4",
+  "Eigenes Bett neu anziehen: 2",
+  "Gewaschene Kleider Einräumen: 5",
+  "Eigenen Abfall leeren: 4",
+  "Eigenes Zimmer aufräumen: 4",
+  "Eigenes Zimmer saugen: 4",
+  "Allgemeinen Abfall leeren: 4",
+  "Grün-Abfall leeren: 4",
+  "Glas-Metall Recycling: 2",
+  "Papier & Karton Recycling: 2",
+  "Kochen/Backen: 4",
+  "Allgemeine Räume saugen: 4",
+  "Allgemeine Räume von eigenem Material leeren: 4",
+  "SPEZIAL-AKTION: 2"
       ].join("\n")
   );
   const [weeks, setWeeks] = useState(() => {
     const v = parseInt(localStorage.getItem("jugendlohn_weeks") || "4", 10);
     return Number.isFinite(v) && v > 0 ? v : 4;
   });
-  const [targetsInput, setTargetsInput] = useState(() => localStorage.getItem("jugendlohn_targets") || "5,5,3,2");
+  const [targetsInput, setTargetsInput] = useState(() => localStorage.getItem("jugendlohn_targets") || "6,6,4,4");
   const [seed, setSeed] = useState(() => {
     const v = parseInt(localStorage.getItem("jugendlohn_seed") || "42", 10);
     return Number.isFinite(v) ? v : 42;
